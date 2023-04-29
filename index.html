@@ -5,8 +5,155 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EnColor</title>
+    <style>
+        @font-face { font-family: GothaBook; 
+            src: url(interface/gotham-font/GothamBook.ttf) format("truetype"); } 
+
+        @font-face { font-family: GothamMedIt; 
+            src: url(interface/gotham-font/GothamMediumItalic.ttf) format("truetype"); } 
+
+
+        .container {
+            width: 341px;
+            height: 466px;
+            background-color: #ffffff;
+            position: relative;
+            margin-top: -10px;
+            margin-left: -10px;
+
+        }
+
+
+        .logo{
+            width: 90px;
+            height: 90px;
+            position: relative;
+            top: 14px;
+            left: 14px
+        }
+
+        .barline{
+            width: 350px;
+            height: 0px;
+            position: relative;
+            top: -56px;
+            left: 0px
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+
+        @keyframes fadeOut {
+            100% { opacity: 1; }
+            0% { opacity: 0; }
+        }
+
+
+        .buttons-container {
+            width: 250px;
+            height: 238px;
+            margin: 0 auto;
+            margin-top: 25px;
+            background-color: #572c2c00;
+        }
+
+        .overlay {
+            background-color: #572c2c00;
+            z-index: 9;
+            margin-top: -242.7px;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transition: 0.5s;
+            transition-timing-function: ease-in-out;
+        }
+
+        .marg5 {
+            margin: 5px;
+        }
+
+        .fade-in:hover {
+            opacity: 100;
+        } 
+
+
+        .desc {
+            width: 275px;
+            margin: 0 auto;
+            margin-top: -5px;
+        }
+
+        .version {
+            width: 70px;
+            margin: 0 auto;
+            margin-top: 42px;
+        }
+    </style>
+
+
+
+
 </head>
+
+
 <body>
-    <h1>EnColor</h1>
+    <div class="container">
+
+    <div class="logo">
+        <img src="interface/Asset 1.svg">
+    </div>
+
+    <div class="barline">
+        <img src="interface/Asset 3.svg">
+    </div>
+
+    <div class="desc">
+        <img src="interface/Text/Text1.svg">
+    </div>
+
+    <div class="buttons-container">
+        <div class="marg5">
+            <img src="interface/Buttons/UnselectedV2/Normal Vision.svg">
+            <img src="interface/Buttons/UnselectedV2/Protanopia.svg">
+            <img src="interface/Buttons/UnselectedV2/Tritanopia.svg">
+            <img src="interface/Buttons/UnselectedV2/Deuteranomaly.svg">
+            <img src="interface/Buttons/UnselectedV2/Achromatopsia.svg">
+        </div>
+
+    </div>
+
+    <div class="buttons-container overlay">
+
+        <div class="marg5">
+            <div class="fade-in">
+                <img src="interface/Buttons/Selected/Normal Vision.svg">
+            </div>
+            <div class="fade-in">
+                <img src="interface/Buttons/Selected/Protanopia.svg">
+            </div>
+            <div class="fade-in">
+                <img src="interface/Buttons/Selected/Tritanopia.svg">
+            </div>
+            <div class="fade-in">
+                <img src="interface/Buttons/Selected/Deuteranomaly.svg">
+            </div>
+            <div class="fade-in">
+                <img src="interface/Buttons/Selected/Achromatopsia.svg">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="version">
+        <img src="interface/Text/Text2.svg">
+
+    </div>
+
+    
 </body>
+
 </html>
