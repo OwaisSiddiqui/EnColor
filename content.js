@@ -1,27 +1,11 @@
-const targetNode = document.body;
+new p5();
 
-const config = { childList: true, subtree: true };
+console.log(window)
 
-const changeImg = async (img) => {
-  console.log("*** Image was added! ***")
-  img.src = "";
-}
+const allElements = document.querySelectorAll("*")
 
-const callback = (mutationList, observer) => {
-  for (const mutation of mutationsList) {
-    if (mutation.type === 'childList') {
-        // Check added nodes
-        for (const addedNode of mutation.addedNodes) {
-            if (addedNode.nodeName.toLowerCase() === 'img') {
-              changeImg(addedNode)
-            }
-        }
-    }
-  }
-};
-
-const observer = new MutationObserver(callback);
-
-observer.observe(targetNode, config);
-
-observer.disconnect();
+allElements.forEach((element) => {
+  let c = color(element.style.color)
+  console.log(element.style.color)
+  element.style.color = c.toString('hsb')
+});
