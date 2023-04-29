@@ -80,6 +80,10 @@
             opacity: 100;
         } 
 
+        .fade-in:checked {
+            opacity: 100;
+        }
+
 
         .desc {
             width: 275px;
@@ -92,6 +96,33 @@
             margin: 0 auto;
             margin-top: 42px;
         }
+
+
+        [type=radio]:checked + img {
+        opacity: 100;
+        }
+
+        [type=radio]:hover + img {
+        opacity: 100;
+        }
+
+        [type=radio] + img {
+            opacity: 0;
+            transition: 0.5s;
+            transition-timing-function: ease-in-out;
+        }
+        
+        [type=radio] + img {
+        cursor: pointer;
+        }
+
+        [type=radio] { 
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        }
+
     </style>
 
 
@@ -129,21 +160,35 @@
     <div class="buttons-container overlay">
 
         <div class="marg5">
-            <div class="fade-in">
+            
+            <div class="radio-group">
+
+            <label>
+                <input type="radio" id="radio1" name="settings" value="1" checked>
                 <img src="interface/Buttons/Selected/Normal Vision.svg">
-            </div>
-            <div class="fade-in">
+            </label>
+
+
+            <label>
+                <input type="radio" id="radio1" name="settings" value="2">
                 <img src="interface/Buttons/Selected/Protanopia.svg">
-            </div>
-            <div class="fade-in">
+            </label>
+            
+
+            <label>
+                <input type="radio" id="radio1" name="settings" value="3">
                 <img src="interface/Buttons/Selected/Tritanopia.svg">
-            </div>
-            <div class="fade-in">
+            </label>
+
+            <label>
+                <input type="radio" id="radio1" name="settings" value="4">
                 <img src="interface/Buttons/Selected/Deuteranomaly.svg">
-            </div>
-            <div class="fade-in">
+            </label>
+
+            <label>
+                <input type="radio" id="radio1" name="settings" value="5">
                 <img src="interface/Buttons/Selected/Achromatopsia.svg">
-            </div>
+            </label>
         </div>
     </div>
 
