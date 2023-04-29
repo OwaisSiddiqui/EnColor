@@ -1,11 +1,16 @@
 new p5();
 
-console.log(window)
-
 const allElements = document.querySelectorAll("*")
 
 allElements.forEach((element) => {
-  let c = color(element.style.color)
-  console.log(element.style.color)
-  element.style.color = c.toString('hsb')
+  const style = getComputedStyle(element);
+  const elementColor = color(style.color);
+  
+  const h = hue(elementColor);
+  const s = saturation(elementColor);
+  const l = lightness(elementColor);
+
+  const newHSLColor = `hsl(${h}, ${constrain(s + 300, 0, 100)}%, ${l}%)`;
+
+  element.style.color = newHSLColor;
 });

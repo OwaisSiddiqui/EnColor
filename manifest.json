@@ -15,7 +15,6 @@
     "content_scripts": [
         {
             "js": ["p5.min.js", "content.js"],
-            "run_at": "document_end",
             "matches": [
                 "https://*/*"
             ]
