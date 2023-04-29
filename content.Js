@@ -3,7 +3,8 @@ const targetNode = document.body;
 const config = { childList: true, subtree: true };
 
 const changeImg = async (img) => {
-  img.src = ""
+  console.log("*** Image was added! ***")
+  img.src = "";
 }
 
 const callback = (mutationList, observer) => {
