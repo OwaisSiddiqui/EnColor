@@ -7,8 +7,8 @@
 With the widespread use of the internet being prevalent around the world, we started by looking for something that would make learning and using the web more accessible to everyone. Through our research, we found a problem that exists in 300 million people around the world. Color blindness makes understanding images much more difficult- here's the comparison of an animal cell for those with protanopia and those who don't:
 
 <p float="left">
-  <img src="https://github.com/JwuCode/documentReader/blob/main/img_final_bin.jpg?raw=true" width="500" height="600">
-  <img src="https://github.com/JwuCode/documentReader/blob/main/result.png?raw=true" width="500"  height="600" /> 
+  <img src="https://github.com/OwaisSiddiqui/EnColor/blob/main/READMEimp.png?raw=true" width="400" height="300">
+  <img src="https://github.com/OwaisSiddiqui/EnColor/blob/main/READMEim.png?raw=true" width="400"  height="300" /> 
 </p>
 
 We were trying to come up with multiple different ideas on the whiteboard, something niche to automate, in which went back and forth on the idea prompt of something to do with accessibility. Inspired by League of Legend’s color-blind mode, we decided to dive into the topic of color blindness and see what we can do. 
