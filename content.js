@@ -19,7 +19,7 @@ function changeColor(element, url){
     .then(async (response)=>{
         let imgData = await response.blob()
         let fileData = new FormData()
-        let fileName = url.replaceAll(/[^a-zA_Z0-9]/g, "")
+        let fileName = url.replaceAll("/", "")
         fileData.append(fileName, imgData)
         fetch('http://127.0.0.1:5000/convert', {method:'POST', 
   mode: 'cors',
