@@ -1,11 +1,11 @@
 new p5();
 import { v4 as uuidv4 } from 'uuid'
 console.log("Working");
-const allElements = document.querySelectorAll("*");
+const allElements = document.querySelector("body").querySelectorAll("*");
 
-chrome.storage.sync.get("choice", (items) => {
-  const choice = items[0]
-  if (choice === "normal") {
+chrome.storage.local.get("choice", (items) => {
+  const choice = items['choice']
+  if (choice === "1" || !choice) {
     return;
   }
   function absColor(currVal, addedVal) {
@@ -19,10 +19,19 @@ chrome.storage.sync.get("choice", (items) => {
   }
   
   function changeColor(element, url) {
+    console.log("image detected")
+    console.log(element)
     fetch(url).then(async (response) => {
       let imgData = await response.blob();
       let fileData = new FormData();
-      fileData.append(uuidv4(), imgData);
+      let fileEnding = ''
+      if(/data[:][/]image/.test(url)){
+        fileEnding = '.'+/(?=data[:]image[/])[a-zA-Z]/.exec(url)[0]
+      }
+      else{
+        fileEnding = /[.][a-zA-Z]+$/.exec(url)[0]
+      }
+      fileData.append(uuidv4()+fileEnding, imgData);
       fetch("http://127.0.0.1:5000/convert", {
         method: "POST",
         mode: "cors",
@@ -33,7 +42,9 @@ chrome.storage.sync.get("choice", (items) => {
         reader.readAsDataURL(blob);
         reader.onloadend = function () {
           var base64data = reader.result;
+          console.log("changing")
           element.src = base64data;
+          element.srcset = base64data
         };
       });
     });
@@ -45,8 +56,7 @@ chrome.storage.sync.get("choice", (items) => {
       return -1;
     }
   }
-  
-  allElements.forEach((element) => {
+  const changeElement = (element) => {
     const properties = ["color", "backgroundColor"];
   
     properties.forEach((property) => {
@@ -57,6 +67,7 @@ chrome.storage.sync.get("choice", (items) => {
         return;
       }
       if (element.nodeName === "IMG") {
+        element.loading=""
         changeColor(element, element.src);
       } else {
         colorMode(HSB);
@@ -102,6 +113,28 @@ chrome.storage.sync.get("choice", (items) => {
         }
       }
     });
+  }
+  allElements.forEach((element)=>{
+    console.log(element)
+    changeElement(element)
   });
+
+const targetNode = document.querySelector("body")
+
+const config = { childList: true, subtree: true };
+
+const callback = (mutationList, observer) => {
+  for (const mutation of mutationList) {
+        for (const addedNode of mutation.addedNodes) {
+            console.log(addedNode)
+            console.log("mutationmutation")
+            changeElement(addedNode)
+    }
+  }
+};
+
+const observer = new MutationObserver(callback);
+
+observer.observe(targetNode, config);
   
 })

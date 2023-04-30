@@ -17,6 +17,7 @@ def hello_world():
 @app.route("/convert", methods=['POST'])
 def convert():
     for i in request.files:
+        print(i)
         extension = i.rsplit('.')[-1].lower()
         request.files[i].save(os.path.join(app.config['UPLOAD_FOLDER'], i))
         changeImageColor(os.path.join(app.config['UPLOAD_FOLDER'], i), os.path.join(app.config['CONVERT_FOLDER'], i))

@@ -34,8 +34,8 @@ def changeImageColor(filepath, savepath):
     cv.imwrite(savepath, final)
 colorDefinitions = {
   "noGreen": {
-    "upperBound" : np.array([92, 203, 194]),
-    "lowerBound" : np.array([19, 46, 123])
+    "upperBound" : np.array([74, 201, 216]),
+    "lowerBound" : np.array([33, 50, 50])
   }
 }
 
