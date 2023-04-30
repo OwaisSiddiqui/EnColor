@@ -21,6 +21,7 @@ enColor is an easy to use Google Chrome extension with the purpose of providing 
   <img src="https://github.com/OwaisSiddiqui/EnColor/blob/main/woenc.png?raw=true" width="400"  height="300" /> 
 </p>
 
+In the image on the right, all the trees appear to be yellow, but the filtered version on the left shows the green trees with blue coloring that would've otherwise gone unnoticed by those with this type of color-blindness.
 
 #### 🔧 How we built it
 We used DOM manipulation to access and modify the main HTML/CSS of the webpage through the extension to change colors of the text and web components such as buttons. For images, we used Python's OpenCV library to create masks in order to isolate the color we wanted to change, then used Numpy to shift the color. The converted images are then returned through a Flask API to the front-end to replace the original images.
