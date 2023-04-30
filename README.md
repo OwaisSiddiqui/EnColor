@@ -7,7 +7,7 @@
 With the widespread use of the internet being prevalent around the world, we started by looking for something that would make learning and using the web more accessible to everyone. Through our research, we found a problem that exists in 300 million people around the world. Color blindness makes understanding images much more difficult- here's the comparison of an animal cell for those with protanopia and those who don't:
 
 <p float="left">
-  <img src="https://github.com/OwaisSiddiqui/EnColor/blob/main/READMEimp.png?raw=true" width="400" height="300">
+  <img src="https://github.com/OwaisSiddiqui/EnColor/blob/main/READMEimP.png?raw=true" width="400" height="300">
   <img src="https://github.com/OwaisSiddiqui/EnColor/blob/main/READMEim.png?raw=true" width="400"  height="300" /> 
 </p>
 
