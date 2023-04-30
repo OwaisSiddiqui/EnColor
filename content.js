@@ -1,5 +1,5 @@
 new p5();
-
+console.log("Working")
 const allElements = document.querySelectorAll("*")
 
 function absColor(currVal, addedVal) {
@@ -13,6 +13,13 @@ function absColor(currVal, addedVal) {
       return (currVal + addedVal)
     }
 }
+function restrict(val, lower, upper){
+if (val <= upper && val >= lower) {
+  return val
+} else {
+  return -1
+}
+}
 
 allElements.forEach((element) => {
   colorMode(HSB)
@@ -22,16 +29,31 @@ allElements.forEach((element) => {
   const h = hue(elementColor);
   const s = saturation(elementColor);
   const b = brightness(elementColor);
-  
-  const newH = absColor(constrain(h, 21, 94),-170);
-  const newS = absColor(constrain(s, 92, 189), -50);
-  const newB = constrain(b, 85, 215);
+
+  console.log(element, style.color)
+  console.log(h, s, b)
+
+  var newH = h;
+  var newS = s;
+  var newB = b;
+ 
+  if (restrict(h, 19, 130) != -1 && restrict(s, 46, 203) != -1 && restrict(b, 60, 194) != -1) {
+    newH = absColor(h,-170);
+    newS = 120
+    newB = b;
+    console.log("blind detected")
+  }
+
+  console.log(getComputedStyle(element).color + " " + element.nodeName)
+
+  console.log("New color 1", newH, newS, newB)
 
   const newColor = color(newH, newS, newB)
 
   colorMode(HSL)
+
+  console.log("New color", newColor.toString("hsb"))
   
   const newHSLColor = `hsl(${hue(newColor)}, ${saturation(newColor)}%, ${lightness(newColor)}%)`;
   element.style.color = newHSLColor;
 });
-

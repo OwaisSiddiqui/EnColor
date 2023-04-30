@@ -16,6 +16,7 @@
         {
             "js": ["p5.min.js", "content.js"],
             "matches": [
+                "http://*/*",
                 "https://*/*"
             ]
         }
