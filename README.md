@@ -17,8 +17,8 @@ As can be observed, those who have protanopia are unable to correctly identify w
 enColor is an easy to use Google Chrome extension with the purpose of providing accessibility for those who may have any type of color-blindness, allowing them to differentiate colors in images and web components that would otherwise appear the same. This has many practicalities, from allowing visually impaired users to see more distinct edges in images to being able to more clearly read text. Here's how a person with protanopia sees a group of trees with and without our extension:
 
 <p float="left">
-  <img src="https://github.com/OwaisSiddiqui/EnColor/blob/main/READMEimP.png?raw=true" width="400" height="300">
-  <img src="https://github.com/OwaisSiddiqui/EnColor/blob/main/READMEim.png?raw=true" width="400"  height="300" /> 
+  <img src="https://github.com/OwaisSiddiqui/EnColor/blob/main/wenc.png?raw=true" width="400" height="300">
+  <img src="https://github.com/OwaisSiddiqui/EnColor/blob/main/woenc.png?raw=true" width="400"  height="300" /> 
 </p>
 
 
