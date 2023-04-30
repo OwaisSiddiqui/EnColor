@@ -14,12 +14,12 @@
     },
     "content_scripts": [
         {
-            "js": ["p5.min.js", "content.js"],
+            "js": ["p5.min.js", "dist/main.js"],
             "matches": [
                 "http://*/*",
                 "https://*/*"
             ]
         }
     ],
-    "permissions": ["activeTab"]
+    "permissions": ["activeTab", "storage"]
   }
