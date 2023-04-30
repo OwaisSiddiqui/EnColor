@@ -2,7 +2,7 @@
 <p float="center">
   <img src="https://github.com/OwaisSiddiqui/EnColor/blob/main/interface/thumbnail.png?raw=true"/> 
 </p>
-A Chrome extension enhancing website UI by adjusting colors for improved readability. Suited for those who happen to have color blindness. 
+>>> A Chrome extension enhancing website UI by adjusting colors for improved readability. Suited for those who happen to have color blindness. 
 
 ## Documentation
 
