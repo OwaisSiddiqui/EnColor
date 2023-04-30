@@ -4,14 +4,14 @@
 ## Documentation
 
 #### 💭 Inspiration
-With the widespread use of the internet being prevalent around the world, we started by looking for something that would make learning and using the web more accessible to everyone. Through our research, we found a problem that exists in 300 million people around the world. Color blindness makes understanding images much more difficult- here's the comparison of an animal cell for those with protanopia and those who don't:
+With the widespread use of the internet being prevalent around the world, we started by looking for something that would make learning and using the web more accessible to everyone. Through our research, we found a problem that exists in 300 million people around the world. Color blindness makes understanding images much more difficult- here's the comparison of the visible light spectrum for those who have protanopia and those who don't:
 
 <p float="left">
   <img src="https://github.com/OwaisSiddiqui/EnColor/blob/main/READMEimP.png?raw=true" width="400" height="300">
   <img src="https://github.com/OwaisSiddiqui/EnColor/blob/main/READMEim.png?raw=true" width="400"  height="300" /> 
 </p>
 
-We were trying to come up with multiple different ideas on the whiteboard, something niche to automate, in which went back and forth on the idea prompt of something to do with accessibility. Inspired by League of Legend’s color-blind mode, we decided to dive into the topic of color blindness and see what we can do. 
+As can be observed, those who have protanopia are unable to correctly identify what at what wavelengths the color has shifted. This can be applied to various other cases as well, such as when studying for a biology exam, and being unable to tell where the cytoplasm starts and where it ends due to the color choice of the website. Through these considerations, we decided to make a chrome extension as a convenient solution that would change certain color-blind afflicted colors so that users can properly identify what they are looking at with one click.
 
 #### 💻 What it does
 enColor is an easy to use Google Chrome extension with the purpose of providing accessibility for those who may have any type of color-blindness, allowing them to differentiate colors in images and web components that would otherwise appear the same. This has many practicalities, from allowing visually impaired users to see more distinct edges in images to being able to more clearly read text.
