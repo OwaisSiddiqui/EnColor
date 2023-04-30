@@ -14,14 +14,20 @@ With the widespread use of the internet being prevalent around the world, we sta
 As can be observed, those who have protanopia are unable to correctly identify what at what wavelengths the color has shifted. This can be applied to various other cases as well, such as when studying for a biology exam, and being unable to tell where the cytoplasm starts and where it ends due to the color choice of the website. Through these considerations, we decided to make a chrome extension as a convenient solution that would change certain color-blind afflicted colors so that users can properly identify what they are looking at with one click.
 
 #### 💻 What it does
-enColor is an easy to use Google Chrome extension with the purpose of providing accessibility for those who may have any type of color-blindness, allowing them to differentiate colors in images and web components that would otherwise appear the same. This has many practicalities, from allowing visually impaired users to see more distinct edges in images to being able to more clearly read text.
+enColor is an easy to use Google Chrome extension with the purpose of providing accessibility for those who may have any type of color-blindness, allowing them to differentiate colors in images and web components that would otherwise appear the same. This has many practicalities, from allowing visually impaired users to see more distinct edges in images to being able to more clearly read text. Here's how a person with protanopia sees a group of trees with and without our extension:
+
+<p float="left">
+  <img src="https://github.com/OwaisSiddiqui/EnColor/blob/main/READMEimP.png?raw=true" width="400" height="300">
+  <img src="https://github.com/OwaisSiddiqui/EnColor/blob/main/READMEim.png?raw=true" width="400"  height="300" /> 
+</p>
 
 
 #### 🔧 How we built it
 We used DOM manipulation to access and modify the main HTML/CSS of the webpage through the extension to change colors of the text and web components such as buttons. For images, we used Python's OpenCV library to create masks in order to isolate the color we wanted to change, then used Numpy to shift the color. The converted images are then returned through a Flask API to the front-end to replace the original images.
 
 #### ⚙️ Challenges we ran into
-For the backend we had trouble understanding how colors worked
+We had problems with linearly scaling the color changes in images, as we didn't want to just set the color directly- this would make the image much more difficult to understand. We solved this by switching to the HSV (Hue, Saturation, Value) color code  which allowed us to create a better filter. 
+
 
 
 #### ⭐️ Accomplishments that we're proud of
@@ -29,8 +35,7 @@ For the backend we had trouble understanding how colors worked
 
 
 #### 🧠 What we learned
-We learned more intermediate HTML/CSS and how to implement it in a chrome extension. ++ other stuff
-
+We learned more intermediate HTML/CSS, UI/UX design, and how to implement it in a chrome extension. We gained experience in Python through Flask and OpenCV, 
 
 #### 👀 What's next for enColor
 We plan on implementing more flexibility with the color changing options, allowing for users to select from a larger variety of colors to change from and to instead of focusing on the main types of color blindness. We also plan on implementing WebGL to allow for color manipulation in videos.
