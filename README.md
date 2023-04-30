@@ -32,7 +32,9 @@ We used DOM manipulation to access and modify the main HTML/CSS of the webpage t
 #### ⚙️ Challenges we ran into
 We had problems with linearly scaling the color changes in images, as we didn't want to just set the color directly- this would make the image much more difficult to understand. We solved this by switching to the HSV (Hue, Saturation, Value) color code  which allowed us to create a better filter. 
 
+Another major challenge was dealing with CORS-headers, which prevented us from fetching the required image data in our chrome extension. It took a while before we discovered we could use a chrome extension to disable the CORS-headers. 
 
+Besides that, we had to deal with a myriad of other of miscellaneous bugs when setting up our Flask server and chrome extension, such as python package compatbility issues with OpenCV, abnormal document query selector behaviour when using a chrome extension, and dealing with webpages that don't load all their images at once.
 
 #### ⭐️ Accomplishments that we're proud of
 
