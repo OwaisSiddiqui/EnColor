@@ -13,6 +13,27 @@ function absColor(currVal, addedVal) {
       return (currVal + addedVal)
     }
 }
+
+function changeColor(element, url){
+  fetch(url)
+    .then(async (response)=>{
+        let imgData = await response.blob()
+        let fileData = new FormData()
+        let fileName = url.replaceAll(/[^a-zA_Z0-9]/g, "")
+        fileData.append(fileName, imgData)
+        fetch('http://127.0.0.1:5000/convert', {method:'POST', 
+  mode: 'cors',
+body:fileData}).then(async(response)=>{
+    let blob = await response.blob()
+    var reader = new FileReader();
+reader.readAsDataURL(blob); 
+reader.onloadend = function() {
+  var base64data = reader.result;                
+  element.src = base64data
+}
+})
+    })
+}
 function restrict(val, lower, upper){
 if (val <= upper && val >= lower) {
   return val
@@ -22,6 +43,11 @@ if (val <= upper && val >= lower) {
 }
 
 allElements.forEach((element) => {
+  if (element.nodeName === 'IMG'){
+    changeColor(element, element.src)
+  }
+  else{
+
   colorMode(HSB)
   const style = getComputedStyle(element);
   const elementColor = color(style.color);
@@ -56,4 +82,5 @@ allElements.forEach((element) => {
   
   const newHSLColor = `hsl(${hue(newColor)}, ${saturation(newColor)}%, ${lightness(newColor)}%)`;
   element.style.color = newHSLColor;
+}
 });
