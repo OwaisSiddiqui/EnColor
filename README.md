@@ -36,11 +36,13 @@ Another major challenge was dealing with CORS-headers, which prevented us from f
 Besides that, we had to deal with a myriad of other of miscellaneous bugs when setting up our Flask server and chrome extension, such as python package compatbility issues with OpenCV, abnormal document query selector behaviour when using a chrome extension, and dealing with webpages that don't load all their images at once.
 
 #### ⭐️ Accomplishments that we're proud of
+One of the main things we're proud of is that we managed to get our image processing working. It took a significant chunk of time to figure out how to detect a broad range of colors that would qualify as "green" and then how to subsequently modify the image colouring to translate the detected green colors to a color palette that's easily visible to those with color-blindness and preserves the original hue differences. 
 
+Besides that, the other thing we're proud of is that we managed to overcome the random and esoteric bugs we encountered during development, such as the ones mentioned above. It was thanks to a combination of intuitive hunches grounded in past programming experiences, careful tracing of code, and help from mentors that this was possible. 
 
 
 #### 🧠 What we learned
-We learned more intermediate HTML/CSS, UI/UX design, and how to implement it in a chrome extension. We gained experience in Python through Flask and OpenCV, 
+We learned more intermediate HTML/CSS, UI/UX design, and how to implement it in a chrome extension. We also learned how to set up a Flask REST api that can handle file data, image processing with OpenCV, and DOM manipulations using chrome extension content scripts. 
 
 #### 👀 What's next for enColor
 We plan on implementing more flexibility with the color changing options, allowing for users to select from a larger variety of colors to change from and to instead of focusing on the main types of color blindness. We also plan on implementing WebGL to allow for color manipulation in videos.
