@@ -1,4 +1,3 @@
-# EnColor
 <p float="center">
   <img src="https://github.com/OwaisSiddiqui/EnColor/blob/main/interface/thumbnail.png?raw=true"/> 
 </p>
